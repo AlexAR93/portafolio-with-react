@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { AppBar,Box,Toolbar,Typography,Button,Divider,Drawer,IconButton,List,ListItem,ListItemButton,ListItemText} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 const drawerWidth = 240;
-const navItems = ['Inicio', 'Portafolio', 'Servicios', 'CV', 'Contacto'];
+const navItems = ['inicio', 'portafolio', 'servicios', 'curriculum', 'contacto'];
 const HeaderNav = () => {
 
     const [mobileOpen, setMobileOpen] = React.useState(false);
