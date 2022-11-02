@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Inicio = () => {
   return (
-    <div className='home'>
+    <section className='page' data-aos="fade-down">
       <h1>
         Hola soy Alex Rodriguez y soy <strong>desarrollador web</strong> en argentina, y ofrezco mis servicios de <strong>programación</strong> y <strong>desarrollo</strong> en todo tipo de proyecto web
       </h1>
@@ -20,7 +20,7 @@ const Inicio = () => {
 
         </div>
       </section>
-    </div>
+    </section>
   )
 }
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { AppBar,Box,Toolbar,Typography,Button,Divider,Drawer,IconButton,List,ListItem,ListItemButton,ListItemText} from '@mui/material';
+import { AppBar,Box,Toolbar,Typography,Button,Divider,Drawer,IconButton,ListItemButton,ListItemText} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 const drawerWidth = 240;
-const navItems = ['inicio', 'portafolio', 'servicios', 'curriculum', 'contacto'];
+const navItems = ['inicio', 'portafolio', 'servicios', 'contacto'];
 const HeaderNav = () => {
 
     const [mobileOpen, setMobileOpen] = React.useState(false);
-  
+
     const handleDrawerToggle = () => {
       setMobileOpen(!mobileOpen);
     };

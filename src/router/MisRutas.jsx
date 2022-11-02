@@ -1,13 +1,12 @@
 import React from 'react'
-import {Routes, Route, BrowserRouter,NavLink,Navigate} from 'react-router-dom'
-import Inicio from '../components/Inicio'
-import Contacto from '../components/Contacto'
-import Curriculum from '../components/Curriculum'
-import Portafolio from '../components/Portafolio'
-import Servicios from '../components/Servicios'
+import {Routes, Route, BrowserRouter,Navigate} from 'react-router-dom'
+import Inicio from '../components/layout/main/Inicio'
+import Contacto from '../components/layout/main/Contacto'
+import Portafolio from '../components/layout/main/Portafolio'
+import Servicios from '../components/layout/main/Servicios'
 import HeaderNav from '../components/layout/HeaderNav'
 import Footer from '../components/layout/Footer'
-
+import { Box,Toolbar} from '@mui/material';
 const MisRutas = () => {
   return (
     <BrowserRouter>
@@ -17,13 +16,13 @@ const MisRutas = () => {
 
         {/* CONTENIDO CENTRAL */}
 
-        <section className='content'>
+        <Box component="main" sx={{ p: 3 }}>
+        <Toolbar/>
           <Routes>
               <Route path='/' element={<Navigate to='/inicio' />}/>
               <Route path='/inicio' element={<Inicio/>}/>
               <Route path='/portafolio' element={<Portafolio/>}/>
               <Route path='/servicios' element={<Servicios/>}/>
-              <Route path='/curriculum' element={<Curriculum/>}/>
               <Route path='/contacto' element={<Contacto/>}/>
               <Route path='/*' element={
                 <div className='page'>
@@ -31,7 +30,8 @@ const MisRutas = () => {
                 </div>
               }/>
           </Routes>
-        </section>
+          </Box>
+        
         
         {/* FOOTER */}
 

@@ -7,3 +7,23 @@ a{
 .active2{
     color: #1976D2;
 }
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: Roboto,sans-serif;
+}
+main{
+
+    
+}
+ main .page{
+    background: #1976D2;
+    border-radius: 12px;
+    box-shadow: 0 0 2px 1px #b7c0c8;
+    text-shadow: 2px 2px 1px #222;
+    color: #fff;
+    padding: 27px;
+    transition: all 1s;
+ }

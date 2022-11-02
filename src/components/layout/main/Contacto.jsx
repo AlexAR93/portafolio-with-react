@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contacto = () => {
   return (
-    <div className='page'>
+    <section className='page' data-aos="fade-down">
       <h1 className='heading'>Contacto</h1>
 
       <form className='contact' action='mailto:aleexrodriguez93@gmail.com'>
@@ -13,7 +13,7 @@ const Contacto = () => {
         <input type='submit' value='Enviar'/>
         
       </form>
-    </div>
+    </section>
   )
 }
 

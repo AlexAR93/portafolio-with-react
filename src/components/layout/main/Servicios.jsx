@@ -2,7 +2,7 @@ import React from 'react'
 
 const Servicios = () => {
   return (
-    <div className='page'>
+    <section className='page' data-aos="fade-down">
       <h1 className='heading'>Servicios</h1>
 
       <section className='services'>
@@ -21,7 +21,7 @@ const Servicios = () => {
           <p>Hago que tu web aparezca en Google y la vea la gente</p>
         </article>
       </section>
-    </div>
+    </section>
   )
 }
 

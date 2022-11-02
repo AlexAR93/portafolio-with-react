@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { trabajos } from '../data/trabajos'
+import { trabajos } from '../../../data/trabajos'
 const Portafolio = () => {
   return (
-    <div className='page'>
+    <section className='page' data-aos="fade-down">
       <h1 className='heading'>Portafolio</h1>
 
       {
@@ -17,7 +17,7 @@ const Portafolio = () => {
 
         ))
       }
-    </div>
+    </section>
   )
 }
 
