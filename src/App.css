@@ -11,19 +11,26 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    
     font-family: Roboto,sans-serif;
 }
 main{
-
-    
+    min-height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
 }
  main .page{
+    width: 100%;
     background: #1976D2;
-    border-radius: 12px;
+    border-radius: 27px;
     box-shadow: 0 0 2px 1px #b7c0c8;
     text-shadow: 2px 2px 1px #222;
     color: #fff;
     padding: 27px;
     transition: all 1s;
+ }
+
+ main .page h1{
+    text-transform: uppercase;
  }

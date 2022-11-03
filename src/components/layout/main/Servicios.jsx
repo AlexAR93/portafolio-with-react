@@ -1,8 +1,8 @@
 import React from 'react'
-
+import './services.css'
 const Servicios = () => {
   return (
-    <section className='page' data-aos="fade-down">
+    <section className='page' data-aos="zoom-in">
       <h1 className='heading'>Servicios</h1>
 
       <section className='services'>
@@ -12,7 +12,7 @@ const Servicios = () => {
         </article>
 
         <article className='service'>
-          <h2>desarrollo Web</h2>
+          <h2>Desarrollo Web</h2>
           <p>Creo tu página web desde cero</p>
         </article>
 

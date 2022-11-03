@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className='footer'>
-        Portafolio Alex Rodriguez &copy; Máster en React - 2022
+        Portafolio Alex Rodriguez &copy;
     </footer>
   )
 }

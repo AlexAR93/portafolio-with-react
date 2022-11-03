@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { trabajos } from '../../../data/trabajos'
 const Portafolio = () => {
   return (
-    <section className='page' data-aos="fade-down">
+    <section className='page' data-aos="zoom-in">
       <h1 className='heading'>Portafolio</h1>
 
       {
