@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './home.css'
-const urlImage='./../../../../images/i.jpg';
-const urlCV='./../../../../docs/cv.pdf'
+import urlImage from'./../../../images/yo.jpg';
+import urlCV from'./../../../docs/cv.pdf'
 const Inicio = () => {
   return (
     <section className='page presentation' data-aos="zoom-in">
@@ -17,7 +17,7 @@ const Inicio = () => {
                     </div>
                     <div className="cv-container">
                         <div className="presentation__cv">
-                            <a href="./assets/docs/cv.pdf" download>Descargar CV</a>
+                            <a href={urlCV} download>Descargar CV</a>
                         </div>
             
                         <ul className="presentation__social-networks">
