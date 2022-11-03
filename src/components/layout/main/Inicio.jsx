@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './home.css'
-const urlImage='./src/images/i.jpg';
-const urlCV='./src/docs/cv.pdf'
+const urlImage='./../../../../images/i.jpg';
+const urlCV='./../../../../docs/cv.pdf'
 const Inicio = () => {
   return (
     <section className='page presentation' data-aos="zoom-in">
