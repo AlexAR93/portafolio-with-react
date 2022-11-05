@@ -34,14 +34,14 @@ const Inicio = () => {
       </div>
       </div>
 
-      <section className='lasts-works'>
+      {/* <section className='lasts-works'>
         <h2 className='heading'>Algunos de mis poryectos</h2>
         <p>Estos son algunos de mis trabajos de desarrollo web</p>
 
         <div className='works'>
 
         </div>
-      </section>
+      </section> */}
                     
     </section>
   )

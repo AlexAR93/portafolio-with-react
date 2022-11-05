@@ -16,7 +16,7 @@ const MisRutas = () => {
 
         {/* CONTENIDO CENTRAL */}
 
-        <Box component="main" sx={{ p: 3 }}>
+        <Box component="main" sx={{ py: 3, px:1 }}>
         <Toolbar/>
           <Routes>
               <Route path='/' element={<Navigate to='/inicio' />}/>
