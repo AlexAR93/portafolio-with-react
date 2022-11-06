@@ -52,7 +52,6 @@
     font-weight: 500;
 }
 .cv-container{
-    align-self: flex-start;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,6 +84,7 @@
 .presentation__social-networks{
     display: flex;
     list-style: none;
+    padding: 0;
 }
 .presentation__social-networks     li{
     margin: 0 1rem;
@@ -127,7 +127,10 @@
         padding: 1rem 0;
         
 }
-.presentation__description{
-    width: 55%;
-}
+    .presentation__description{
+        width: 55%;
+    }
+    .cv-container{
+        justify-content: start;
+    }
 }

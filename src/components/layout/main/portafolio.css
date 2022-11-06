@@ -37,9 +37,7 @@
     align-items: center;
     text-align: center;
 }
-.proyects__card div h2{
-    font-size: 2rem;
-}
+
 .proyects__card div h3{
     color: #2F9DB5;
     font-size: 1.3rem;
@@ -105,6 +103,11 @@
 }
 .tecnologies__card img{
     width: 100%;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 1.5rem;
 }
 
 /* Certificates */
