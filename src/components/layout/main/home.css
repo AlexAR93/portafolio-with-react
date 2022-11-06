@@ -34,7 +34,7 @@
 
 .presentation__img:hover{
     border-radius: 12px;
-    transform: scale(1.07);
+    transform: scale(1.08);
     box-shadow: 4px -2px 9px -2px #474703;
     transition: border-radius .3s, transform .8s,box-shadow 1.5s;
 }
