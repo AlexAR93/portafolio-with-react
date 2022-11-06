@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import {getFirestore,collection,getDocs, query, orderBy} from 'firebase/firestore'
-import { Link } from 'react-router-dom'
-import './portafolio.css'
+import React, { useEffect, useState } from 'react';
+import {getFirestore,collection,getDocs, query, orderBy} from 'firebase/firestore';
+import './portafolio.css';
 const Portafolio = () => {
   const [data, setData] = useState([])
   useEffect(() => {
@@ -13,7 +12,7 @@ const Portafolio = () => {
 
   return (
     <section className='page' data-aos="zoom-in">
-      <h1 className='heading'>Portafolio</h1>
+      <h1 className='heading'>Mis proyectos</h1>
       <div className="proyects">
         {
           data.length>0?(
@@ -21,7 +20,7 @@ const Portafolio = () => {
               <article className='proyects__card' key={proyect.id}>
                   <img src={proyect.image} alt={`proyecto ${proyect.name}`}/>
                   <div>
-                  <h2><Link to={`/proyecto`}>{proyect.name}</Link></h2>
+                  <h2>{proyect.name}</h2>
                   <h3>{proyect.tecnologies.join(' ')}</h3>
                   <p>{proyect.description}</p>
                   <div className="link">
