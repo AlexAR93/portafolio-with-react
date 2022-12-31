@@ -168,7 +168,6 @@ h2{
     background: #94949464;
 }
 .certificate-view__img{
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,11 +211,10 @@ h2{
 @media (min-width:800px) {
     .certificate-view__img{
         margin: 10%;
-        margin-top: 12%;
+        margin-top: 14%;
     }
     .certificate-view__img img{
-
-        max-width: 74%;
+        max-width: 73%;
     }
 }
 

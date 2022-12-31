@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './home.css'
-import urlImage from'./../../../images/yo.jpg';
 import urlCV from'./../../../docs/cv.pdf'
 import getFirebaseData from '../../../helpers/getFirebaseData';
 
@@ -12,19 +11,19 @@ const Inicio = () => {
     getFirebaseData('aboutMe')
     .then(info=>setData(...info))
 }, [])
-
+  
   
   if(Object.keys(data).length>0){
     return (
       <section className='page presentation' data-aos="zoom-in">
         <div className="presentation-container" data-aos="flip-left" data-aos-duration="600">
         <div className="presentation__img">
-          <img src={urlImage} alt="yo"/>
+          <img src={data.image} alt="yo"/>
         </div>
         <div className="presentation__description">
           <div className="presentation__text">
                             <p>HOLA YO SOY</p>
-                            <h1>{data.name}</h1>
+                            <h1><span>{data.name}</span> {data.surname}</h1>
                             <p>{data.description}</p>
           </div>
           <div className="cv-container">

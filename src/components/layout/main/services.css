@@ -20,10 +20,11 @@
     transform: scale(1.03);
 }
 .service h2{
-    font-weight: 500;
-    font-size: 1.5rem;
+    font-weight: 400;
+    font-size: 1.55rem;
     text-transform: uppercase;
 }
 .service p{
     font-weight: 300;
+    font-size: 1.25rem;
 }

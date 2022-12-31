@@ -14,12 +14,11 @@ const Certificates = ({getFirebaseData}) => {
     }, [])
 
   const openImage=(e)=>{
-    console.log(e.target.src,currentCertificateView)
-    setCurrentCertificateView(backValue=>({
+    setCurrentCertificateView({
       value:true,
       src:e.target.src,
       name:e.target.alt
-    }))
+    })
   }
   const closeImage=()=>{
     setCurrentCertificateView({
