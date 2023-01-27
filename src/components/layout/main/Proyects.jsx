@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const Proyects = ({getFirebaseData}) => {
     const [data, setData] = useState([])
     useEffect(() => {
-        getFirebaseData('proyects','order','asc')
+        getFirebaseData('proyects','createAt','desc')
         .then(proyects=>setData(proyects))
     }, [])
   return (
