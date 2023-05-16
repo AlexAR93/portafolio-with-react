@@ -19,14 +19,13 @@
     width: 310px;
     height: 310px;
     margin: 2rem 0;
+    display: flex;
     border-radius: 100%;
     overflow: hidden;
     box-shadow: 4px -2px 24px 0px #1976D2;
 }
 .presentation__img img{
-    width: 700px;
-    position: relative;
-    right: 290px;
+    width: 100%;
 }
 
 .presentation__img:hover{
