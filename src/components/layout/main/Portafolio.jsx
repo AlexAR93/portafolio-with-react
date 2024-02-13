@@ -6,6 +6,7 @@ import getFirebaseData from '../../../helpers/getFirebaseData';
 import Proyects from './Proyects';
 import Tecnologies from './Tecnologies';
 import Certificates from './Certificates';
+import Works from './Works';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
@@ -45,19 +46,23 @@ export default function BasicTabs() {
     <Box sx={{ width: '100%'}}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider'}}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Tecnologias" {...a11yProps(0)} />
-          <Tab label="Certificados" {...a11yProps(1)} />
-          <Tab label="Proyectos" {...a11yProps(2)} />
+          <Tab label="Certificados" {...a11yProps(0)} />
+          <Tab label="Proyectos" {...a11yProps(1)} />
+          <Tab label="Trabajos" {...a11yProps(2)} />
+          <Tab label="Tecnologias" {...a11yProps(3)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <Tecnologies getFirebaseData={getFirebaseData}/>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
         <Certificates getFirebaseData={getFirebaseData}/>
       </TabPanel>
-      <TabPanel value={value} index={2}>
+      <TabPanel value={value} index={1}>
         <Proyects getFirebaseData={getFirebaseData}/>
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <Works getFirebaseData={getFirebaseData}/>
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <Tecnologies getFirebaseData={getFirebaseData}/>
       </TabPanel>
     </Box>
   );

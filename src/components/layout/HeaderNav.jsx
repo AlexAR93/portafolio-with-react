@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { AppBar,Box,Toolbar,Typography,Button,Divider,Drawer,IconButton,ListItemButton,ListItemText} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-const drawerWidth = 240;
+const drawerWidth = 270;
 const navItems = ['Inicio', 'Portafolio', 'Servicios', 'Contacto'];
 const HeaderNav = () => {
 
@@ -14,9 +14,9 @@ const HeaderNav = () => {
   
     const drawer = (
       <Box sx={{ textAlign: 'center'}}>
-        <Typography variant="h6" sx={{ my: 2, px:2, display:'flex',justifyContent:'space-between' }}>
-          Alex Rodriguez
-          <Button onClick={handleDrawerToggle}>X</Button>
+        <Typography variant="h6" sx={{ my: 2, pl:2,pr:1, display:'flex',justifyContent:'space-between' }}>
+          ALEX RODRIGUEZ
+          <Button variant="contained" onClick={handleDrawerToggle}>X</Button>
         </Typography>
        
         <Divider />
