@@ -1,0 +1,220 @@
+.proyects{
+    background: #fff;
+    border-radius: 33px;
+    padding: 2rem 1.2rem;
+}
+
+.proyects__card{
+    background: #fff;
+    box-shadow: 0 0 1px 2px #e9e9e9;
+    color: #474747;
+    font-size: 1.2rem;
+    text-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 33px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 27px;
+    font-weight: 300;
+    transition: all .5s;
+}
+.proyects__card:hover{
+    background: #145da7;
+    color: #fff;
+    transform: scale(1.02);
+}
+.proyects__card img{
+    border-radius: 33px;
+    width: 100%;
+    max-width: 290px;
+}
+.proyects__card div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.proyects__card div h3{
+    color: #2F9DB5;
+    font-size: 1.3rem;
+    padding-bottom: .5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+.proyects__card div p{
+    padding: 0 10%;
+}
+.proyects__card div .link{
+    display: flex;
+   flex-direction: row;
+}
+.proyects__card div .link a{
+    text-decoration: none;
+    background: #1976D2;
+    border-radius: 15px;
+    padding: .8rem 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 1rem 1rem 0 1rem;
+}
+.proyects__card div .link a:hover{
+    background: #145da7;
+    transition: all .3s;
+}
+
+/* tecnologies */
+
+.tecnologies{
+    background: #fff;
+    border-radius: 33px;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:27px;
+    text-align: center;
+}
+
+.tecnologies__card{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #fff;
+    box-shadow: 0 0 1px 2px #e9e9e9;
+    color: #474747;
+    font-size: 1.2rem;
+    text-shadow: none;
+    border-radius: 33px;
+    padding: .5rem .9rem;
+    font-weight: 300;
+    transition: all .5s;
+}
+.tecnologies__card:hover{
+    background: #145da7;
+    color: #fff;
+    transform: scale(1.1);
+}
+.tecnologies__card img{
+    width: 100%;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+/* Certificates */
+
+.certificates{
+    background: #fff;
+    border-radius: 33px;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:27px;
+    text-align: center;
+}
+.certificates__card{
+    width: 500px;
+    background: #fff;
+    box-shadow: 0 0 1px 2px #e9e9e9;
+    color: #474747;
+    text-shadow: none;
+    border-radius: 33px;
+    padding: .5rem .9rem;
+    margin: 0 1rem;
+    transition: all .5s;
+}
+.certificates__card:hover{
+    background: #145da7;
+    color: #fff;
+    transform: scale(1.02);
+}
+.certificates__card img{
+    width: 100%;
+    transition: all .3s;
+}
+.certificates__card img:hover{
+    transform: scale(0.96);
+    cursor: pointer;
+}
+
+.certificate-view{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.certificate-view__container{
+    z-index: 33;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #94949464;
+}
+.certificate-view__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.certificate-view__img img{
+    max-width: 100%;
+     z-index: 50;
+}
+
+@media (min-width:772px) {
+    .proyects__card{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    }
+    .proyects__card div{
+        width: 100%;
+    }
+    .proyects__card div .link{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width:772px) {
+    .proyects__card{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    }
+    .proyects__card div{
+        width: 100%;
+    }
+    .proyects__card div .link{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (min-width:800px) {
+    .certificate-view__img{
+        margin: 10%;
+        margin-top: 14%;
+    }
+    .certificate-view__img img{
+        max-width: 73%;
+    }
+}
+

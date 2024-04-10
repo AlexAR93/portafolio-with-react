@@ -1,10 +1,17 @@
-import './App.css';
-import MisRutas from './router/MisRutas';
+
 import './App.css'
+import { BrowserRouter } from 'react-router-dom';
+import { store } from './store';
+import { Provider } from 'react-redux'
+import { AppRouter } from './router';
 function App() {
   return (
     <div className="layout">
-      <MisRutas/>
+      <BrowserRouter>
+        <Provider store={store}>
+          <AppRouter/>
+        </Provider>
+      </BrowserRouter>
     </div>
   );
 }
