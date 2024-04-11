@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Loading } from '../../ui'
 
 const Works = ({getFirebaseData}) => {
     const [data, setData] = useState([])
@@ -27,8 +28,8 @@ const Works = ({getFirebaseData}) => {
                </article>
                )
              ))
-           ):<div className='proyects__card'>
-             <h2>Cargando...</h2>
+           ):<div className='loading-container'>
+             <Loading/>
            </div>
          }
        </div>

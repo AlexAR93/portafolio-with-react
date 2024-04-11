@@ -1,6 +1,7 @@
 import React, { useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux';
 import { getData } from '../../store/slices/mydata';
+import { Loading } from '../../ui';
 export const Tecnologies = ({getFirebaseData}) => {
   const dispatch= useDispatch();
   const {data,isLoading}=useSelector(state=> state.myData)
@@ -23,9 +24,9 @@ export const Tecnologies = ({getFirebaseData}) => {
                </article>
                )
              ))
-           ):<div className='proyects__card'>
-             <h2>Cargando...</h2>
-           </div>
+           ):<div className='loading-container'>
+              <Loading/>
+            </div>
          }
        </div>
      </section>

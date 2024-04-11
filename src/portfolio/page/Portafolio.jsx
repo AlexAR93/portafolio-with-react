@@ -40,7 +40,9 @@ export function Portafolio() {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-    navigate(`/portafolio/${event.target.innerText.toLowerCase()}`)
+    navigate(`/portafolio/${event.target.innerText.toLowerCase()}`,{
+      replace:false
+    })
   };
   return (
     <Box sx={{ width: '100%'}}>

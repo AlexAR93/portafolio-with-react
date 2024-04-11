@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import './home.css'
 import urlCV from'./../../docs/cv.pdf'
 import { getData } from '../../store/slices/mydata';
+import { Loading } from '../../ui';
 
 
 
@@ -57,9 +58,13 @@ export const Home = () => {
     )
   }else{
     return(
-      <section className='page presentation' data-aos="zoom-in">
-        <h2>Cargando...</h2>
-      </section>
+      <div className='page presentation'>
+        <div className="presentation-container" >
+          <div className='loading-container'>
+            <Loading/>
+          </div>
+        </div>
+      </div>
     )
   }
 
