@@ -19,7 +19,7 @@ export const AppRouter = () => {
         <Box component="main" sx={{ py: 3, px:1 }}>
         <Toolbar/>
           <Routes>
-              <Route path='/' element={<Navigate to='/inicio' />}/>
+              <Route path='/' element={<Navigate to='/inicio' replace='false'/>}/>
               <Route path='/inicio' element={<Home/>}/>
               <Route path='/portafolio/*' element={<PortfolioRouter/>}/>
               {/* <Route path='/servicios' element={<Servicios/>}/> */}

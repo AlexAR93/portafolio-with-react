@@ -6,7 +6,7 @@ export const PortfolioRouter = () => {
     <>
       <Portafolio/>
       <Routes>
-        <Route path='/' element={<Navigate to='certificados'/>}/>
+        <Route path='/' element={<Navigate to='certificados' replace='false'/>}/>
           <Route path='/certificados' element={<Certificates/>}/>
           <Route path='/proyectos' element={<Proyects/>}/>
           <Route path='/tecnologias' element={<Tecnologies/>}/>
