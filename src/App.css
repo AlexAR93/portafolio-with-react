@@ -5,7 +5,7 @@ a{
     color: #cfd219;
 }
 .active2{
-    color: #1976D2;
+    color: #2e4761 !important;
 }
 body{
     margin: 0;
@@ -26,11 +26,6 @@ body{
  main .page h1{
     text-transform: uppercase;
     padding-top: .5rem;
- }
-
- footer{
-    margin-left: 1rem;
-    margin-bottom: 1rem;
  }
 
  @media (min-width:772px) {

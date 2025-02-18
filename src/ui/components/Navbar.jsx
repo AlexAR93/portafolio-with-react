@@ -1,85 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { AppBar,Box,Toolbar,Typography,Button,Divider,Drawer,IconButton,ListItemButton,ListItemText} from '@mui/material';
+import { AppBar, Box, Toolbar, Typography, Button, IconButton, Collapse } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-const drawerWidth = 270;
+import CodeIcon from '@mui/icons-material/Code'; // Ícono de programación
+
 const navItems = ['Inicio', 'Portafolio', 'Contacto'];
+
 export const Navbar = () => {
+  const [open, setOpen] = useState(false);
 
-    const [mobileOpen, setMobileOpen] = React.useState(false);
+  const handleMenuToggle = () => {
+    setOpen(!open);
+  };
 
-    const handleDrawerToggle = () => {
-      setMobileOpen(!mobileOpen);
-    };
-  
-    const drawer = (
-      <Box sx={{ textAlign: 'center'}}>
-        <Typography variant="h6" sx={{ my: 2, pl:2,pr:1, display:'flex',justifyContent:'space-between' }}>
-          ALEX RODRIGUEZ
-          <Button variant="contained" onClick={handleDrawerToggle}>X</Button>
-        </Typography>
-       
-        <Divider />
-        <Box>
+  return (
+    <AppBar component="nav">
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center'}}>
+        <CodeIcon sx={{ mr: 1 }} /> 
+          <Typography variant="h6" component="div">
+            Alex Rodriguez
+          </Typography>
+        </Box>
+
+        <IconButton 
+          color="inherit" 
+          onClick={handleMenuToggle} 
+          sx={{ display: { sm: 'none' } }}
+        >
+          <MenuIcon />
+        </IconButton>
+
+        <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           {navItems.map((item) => (
-         
-
-            <NavLink key={item} to={`/${item.toLowerCase()}` } className={({isActive})=>isActive?'active2' : ''}>
-                <ListItemButton><ListItemText>{item}</ListItemText></ListItemButton>
+            <NavLink key={item} to={`/${item.toLowerCase()}`}>
+              {({ isActive }) => (
+                <Button className={isActive ? 'active2' : ''} sx={{ color: 'inherit' }}>
+                  {item}
+                </Button>
+              )}
             </NavLink>
-
-    
           ))}
         </Box>
-      </Box>
-    );
-  
-    return (
-  
-        <AppBar component="nav" color="primary">
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: 'none' } }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-            >
-              Alex Rodriguez
-            </Typography>
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-              {navItems.map((item) => (
-                <NavLink key={item} to={`/${item.toLowerCase()}`} className={({isActive})=>isActive?'active' : ''}>
-                    <Button key={item} sx={{ color: 'inherit' }}>
-                        {item}
-                    </Button>
-                </NavLink>            
-              ))}
-            </Box>
-          </Toolbar>
-        
-  
-          <Drawer
-            variant="temporary"
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            ModalProps={{
-              keepMounted: true,
-            }}
-            sx={{
-              display: { xs: 'block', sm: 'none' },
-              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-            }}
-          >
-            {drawer}
-          </Drawer>
-  
-        
-        </AppBar>
-    );
-}
+      </Toolbar>
+
+      {/* Menú tipo acordeón en móviles */}
+      <Collapse in={open} timeout="auto" sx={{ display: { sm: 'none' }, width: '100%', bgcolor: 'primary.main' }}>
+        <Box sx={{ textAlign: 'center', py: 1 }}>
+          {navItems.map((item) => (
+            <NavLink key={item} to={`/${item.toLowerCase()}`}>
+              {({ isActive }) => (
+                <Button className={isActive ? 'active2' : ''} sx={{ color: 'inherit', width: '100%' }}>
+                  {item}
+                </Button>
+              )}
+            </NavLink>
+          ))}
+        </Box>
+      </Collapse>
+    </AppBar>
+  );
+};

@@ -6,7 +6,7 @@ export const Contact = () => {
 
   const [state, handleSubmit] = useForm("mgedovwk");
   if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
+      return <p>A la brevedad responderé su consulta!</p>;
   }
 
   return (

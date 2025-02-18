@@ -46,6 +46,13 @@
 .presentation__text h1 span,.presentation__text p span{
     color: #2F9DB5;
 }
+.presentation__text h2{
+    margin: 16px 0;
+    color: #666666;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: start;
+}
 .presentation__text p{
     text-align: start;
     font-weight: 500;
