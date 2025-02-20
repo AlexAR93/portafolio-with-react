@@ -10,7 +10,7 @@ export const Contact = () => {
   }
 
   return (
-    <section className='page' data-aos="zoom-in">
+    <section className='page contact-main' data-aos="zoom-in">
       <h1 className='heading'>Contacto</h1>
 
       <form onSubmit={handleSubmit} className="card">

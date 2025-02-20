@@ -20,6 +20,10 @@
     text-transform: uppercase;
     font-weight: 500;
 }
+.contact-main h1{
+    text-transform: uppercase;
+    padding-top: .5rem;
+}
 .contact__container div{
     width: 100%;
     margin-bottom: 1rem;
