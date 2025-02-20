@@ -42,12 +42,13 @@
     margin: 10px 0;
     font-weight: 600;
     text-align: start;
+    text-transform: uppercase;
 }
 .presentation__text h1 span,.presentation__text p span{
     color: #2F9DB5;
 }
 .presentation__text h2{
-    margin: 16px 0;
+
     color: #666666;
     font-size: 1rem;
     font-weight: 500;

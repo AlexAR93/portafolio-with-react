@@ -1,10 +1,11 @@
 
+import { Box } from '@mui/material';
 import './loading.css'; 
 
 export const Loading=()=>{
   return (
-    <div className="loading-container">
+    <Box className="loading-container" sx={{height:'100vh'}}>
       <div className="loader"></div>
-    </div>
+    </Box>
   );
 }

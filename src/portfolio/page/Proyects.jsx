@@ -12,12 +12,12 @@ export const Proyects = () => {
   }, []);
 
   return (
-    <section className='page' data-aos="zoom-in">
-       <h1>Mis proyectos</h1>
-       <div className="proyects">
-         {
-           data.length>0&&isLoading==false?(
-             data.map(proyect=>((
+    <>{
+    data.length>0&&isLoading==false?(
+      <section className='page portfolio-main' data-aos="zoom-in">
+      <h1>Mis proyectos</h1>
+      <div className="proyects">
+      {data.map(proyect=>((
                <article className='proyects__card' key={proyect.id}>
                    <img src={proyect.image} alt={`proyecto ${proyect.name}`}/>
                    <div>
@@ -30,13 +30,14 @@ export const Proyects = () => {
                     </div>
                    </div>
                </article>
-               )
-             ))
-           ):<div className='loading-container'>
-              <Loading/>
-            </div>
-         }
-       </div>
-     </section>
+
+
+  ))
+)}
+</div>
+</section>
+):<Loading/>
+              }
+  </>
   )
 }

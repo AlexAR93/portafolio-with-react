@@ -67,13 +67,7 @@ export const Home = () => {
     )
   }else{
     return(
-      <div className='page presentation'>
-        <div className="presentation-container" >
-          <div className='loading-container'>
             <Loading/>
-          </div>
-        </div>
-      </div>
     )
   }
 

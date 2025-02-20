@@ -31,12 +31,13 @@ export const Certificates = () => {
 
   return (
   <>
-    <section className='page' data-aos="zoom-in">
-          <h1>Certificados</h1>
-          <div className="certificates">
-         {
+     {
+      
            data.length>0&&isLoading==false?(
-             data.map(certificate=>((
+            <section className='page portfolio-main' data-aos="zoom-in">
+            <h1>Certificados</h1>
+            <div className="certificates">
+             {data.map(certificate=>((
                <article className='certificates__card' key={certificate.id}>
                    <img src={certificate.image} alt={`${certificate.name}`}
                    onClick={e=>openImage(e)}/>
@@ -44,14 +45,12 @@ export const Certificates = () => {
                         <h2>{certificate.name}</h2>
                    </div>
                </article>
-               )
-             ))
-           ):<div className='loading-container'>
+  ))
+)    }   </div>
+</section>  )
+:
              <Loading/>
-           </div>
-         }
-       </div>
-    </section>
+  }
     {
           currentCertificateView.value==true?(
             <div className='certificate-view'>

@@ -10,25 +10,26 @@ export const Tecnologies = ({getFirebaseData}) => {
     dispatch( getData('tecnologies'));
   }, [])
   return (
-    <section className='page' data-aos="zoom-in">
-       <h1>Tecnologias que domino</h1>
-       <div className="tecnologies">
-         {
-           data.length>0&&isLoading==false?(
-             data.map(tecnology=>((
+    <>
+    {
+      data.length>0&&isLoading==false?(
+        <section className='page portfolio-main' data-aos="zoom-in">
+        <h1>Tecnologias que domino</h1>
+        <div className="tecnologies">
+        {data.map(tecnology=>((
+
                <article className='tecnologies__card' key={tecnology.id}>
                    <img src={tecnology.urlImage} alt={`${tecnology.name}`}/>
                    <div>
                     <h2>{tecnology.name}</h2>
                    </div>
                </article>
-               )
-             ))
-           ):<div className='loading-container'>
-              <Loading/>
-            </div>
-         }
-       </div>
-     </section>
+    )))}
+    </div>
+    </section>   
+  ):
+     <Loading/>
+}
+</>
   )
 }
