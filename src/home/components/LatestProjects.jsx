@@ -15,7 +15,7 @@ export const LatestProjects=(props)=>{
           }
         )
     }, []);
-    for (let i=0; i<5; i++){
+    for (let i=0; i<3; i++){
         data.length>0&&console.log(data[i].id)
         data.length>0&&items.push({name:data[i].name,description:data[i].description,image:data[i].image,urlPage:data[i].urlPage,urlRepository:data[i].urlRepository})
     }
@@ -33,12 +33,24 @@ function Item(props) {
 
     return (
         <>
-            <h2>Últimos proyectos</h2>
+            <Box variant='div' sx={{display:'flex', justifyContent:'space-between'}}>
+                <h2>Últimos proyectos</h2>
+                <Button
+                    variant="contained"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='http://127.0.0.1:5173/portafolio/proyectos'
+                    sx={{ my: 2 }}
+                >
+                    Ver Todo
+                </Button>
+            </Box>
             <Box
                 variant="div"
                 sx={{
                     display: 'flex',
                     flexDirection: isMobile ? 'column' : 'row',
+                    // minHeight: isMobile ? '600px' : 'auto',
                     width: '100%',
                     gap: '10px',
                     background: '#fff',
@@ -61,24 +73,24 @@ function Item(props) {
                     }}
                 ></Paper>
 
-                <Box variant="div" sx={{ textAlign: 'center', mr: isMobile ? 0 : 2, width: isMobile ? '100%' : '40%'}}>
-
-                    <Box sx={{px: isMobile ? 3 : 0}}>
+                <Box variant="div" sx={{ textAlign: 'center', mr: isMobile ? 0 : 2, width: isMobile ? '100%' : '40%', display:'flex', flexDirection:'column', justifyContent:'space-between',minHeight:'40vh'}}>
+                    <Box sx={{px: isMobile ? 3 : 0, mt: isMobile ? 0:3}}>
                         <Typography variant="h3" sx={{ color: '#000', textTransform: 'uppercase', fontSize: '2.1rem' }}>
                             {props.item.name}
                         </Typography>
+                    </Box>
+                    <Box sx={{px: isMobile ? 3 : 0}}>
                         <Typography variant="p" sx={{ color: '#000' }}>
                             {props.item.description}
                         </Typography>
                     </Box>
-
                     <Box variant="div">
                         <Button
                             variant="contained"
                             target="_blank"
                             rel="noopener noreferrer"
                             href={props.item.urlPage}
-                            sx={{ mx: 2, my: 2 }}
+                            sx={{ mx: 1, my: 2 }}
                         >
                             Ver página
                         </Button>
@@ -87,7 +99,7 @@ function Item(props) {
                             target="_blank"
                             rel="noopener noreferrer"
                             href={props.item.urlRepository}
-                            sx={{ mx: 2, my: 2 }}
+                            sx={{ mx: 1, my: 2 }}
                         >
                             Ver Repositorio
                         </Button>
