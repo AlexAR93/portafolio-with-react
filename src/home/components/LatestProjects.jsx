@@ -36,17 +36,6 @@ function Item(props) {
 
     return (
         <>
-            <Box variant='div' sx={{display:'flex', justifyContent:'space-between'}}>
-                <h2>Últimos proyectos</h2>
-                <Button
-                    variant="contained"
-                    sx={{ my: 2 }}
-                >
-                    <Link to={`/portafolio/proyectos`}>
-                        Ver Todo
-                    </Link>
-                </Button>
-            </Box>
             <Box
                 variant="div"
                 sx={{

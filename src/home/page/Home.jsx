@@ -4,9 +4,10 @@ import './home.css'
 import urlCV from'./../../docs/cv.pdf'
 import { getData } from '../../store/slices/mydata';
 import { Loading } from '../../ui';
-import { IconButton } from '@mui/material';
+import { Box, Button, IconButton } from '@mui/material';
 import { Email, GitHub, LinkedIn } from '@mui/icons-material';
 import { LatestProjects } from '../components/LatestProjects';
+import { Link } from 'react-router-dom';
 
 
 
@@ -66,6 +67,17 @@ export const Home = () => {
         </section>     
 
         <section className='latest-project'>
+        <Box variant='div' sx={{display:'flex', justifyContent:'space-between'}}>
+                <h2>Últimos proyectos</h2>
+                <Button
+                    variant="contained"
+                    sx={{ my: 2 }}
+                >
+                    <Link to={`/portafolio/proyectos`}>
+                        Ver Todo
+                    </Link>
+                </Button>
+            </Box>
           <LatestProjects/>
         </section>
       </section>
