@@ -8,22 +8,24 @@ import { Link } from 'react-router-dom';
 
 export const LatestProjects=(props)=>{
     const [data, setData] = useState([])
-    let items=[];
+
     useEffect(() => {
       getFirebaseData('proyects','createAt')
           .then(data=> {
-              setData(data)
+            setData([]);
+              for (let i=0; i<3; i++){
+                setData(d=>[
+                    ...d,
+                    {name:data[i].name,description:data[i].description,image:data[i].image,urlPage:data[i].urlPage,urlRepository:data[i].urlRepository}
+                ])
+            }
           }
         )
     }, []);
-    for (let i=0; i<3; i++){
-        data.length>0&&console.log(data[i].id)
-        data.length>0&&items.push({name:data[i].name,description:data[i].description,image:data[i].image,urlPage:data[i].urlPage,urlRepository:data[i].urlRepository})
-    }
     return (
         <Carousel sx={{display:'flex',flexDirection:'column',gap:2}}>
             {
-                items.map( (item, i) => <Item key={i} item={item} /> )
+                data.map( (item, i) => <Item key={i} item={item} /> )
             }
         </Carousel>
     )
