@@ -3,6 +3,7 @@ import Carousel from 'react-material-ui-carousel'
 import { Paper, Button, Typography, Box } from '@mui/material'
 import { getFirebaseData } from '../../helpers';
 import { useMediaQuery, useTheme } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 
 export const LatestProjects=(props)=>{
@@ -37,12 +38,11 @@ function Item(props) {
                 <h2>Últimos proyectos</h2>
                 <Button
                     variant="contained"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='http://127.0.0.1:5173/portafolio/proyectos'
                     sx={{ my: 2 }}
                 >
-                    Ver Todo
+                    <Link to={`/portafolio/proyectos`}>
+                        Ver Todo
+                    </Link>
                 </Button>
             </Box>
             <Box
