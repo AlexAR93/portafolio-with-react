@@ -1,3 +1,7 @@
+.portfolio-main {
+    text-shadow: 2px 2px 1px #222;
+}
+
 .portfolio-main h1{
     text-transform: uppercase;
     padding-top: .5rem;

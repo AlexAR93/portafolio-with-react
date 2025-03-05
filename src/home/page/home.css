@@ -126,6 +126,10 @@
     transform: scale(1.03);
 }
 
+.latest-project h2{
+    text-shadow: 2px 2px 1px #222;
+}
+
 @media (min-width:772px) {
     .presentation-container{
         flex-direction: row;

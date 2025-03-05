@@ -21,6 +21,7 @@
     font-weight: 500;
 }
 .contact-main h1{
+    text-shadow: 2px 2px 1px #222;
     text-transform: uppercase;
     padding-top: .5rem;
 }
