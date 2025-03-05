@@ -23,7 +23,14 @@ export const LatestProjects=(props)=>{
         )
     }, []);
     return (
-        <Carousel sx={{display:'flex',flexDirection:'column',gap:2}}>
+        <Carousel
+            sx={{display:'flex',flexDirection:'column-reverse',gap:2}}
+            indicatorContainerProps={{
+                sx: {
+                    mt:0
+                }
+            }}
+        >
             {
                 data.map( (item, i) => <Item key={i} item={item} /> )
             }
