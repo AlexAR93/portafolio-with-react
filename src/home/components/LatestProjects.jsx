@@ -61,13 +61,16 @@ function Item(props) {
                     }}
                 ></Paper>
 
-                <Box variant="div" sx={{ textAlign: 'center', mr: 2, width: isMobile ? '100%' : '40%',}}>
-                    <Typography variant="h3" sx={{ color: '#000', textTransform: 'uppercase', fontSize: '2.1rem' }}>
-                        {props.item.name}
-                    </Typography>
-                    <Typography variant="p" sx={{ color: '#000' }}>
-                        {props.item.description}
-                    </Typography>
+                <Box variant="div" sx={{ textAlign: 'center', mr: isMobile ? 0 : 2, width: isMobile ? '100%' : '40%'}}>
+
+                    <Box sx={{px: isMobile ? 3 : 0}}>
+                        <Typography variant="h3" sx={{ color: '#000', textTransform: 'uppercase', fontSize: '2.1rem' }}>
+                            {props.item.name}
+                        </Typography>
+                        <Typography variant="p" sx={{ color: '#000' }}>
+                            {props.item.description}
+                        </Typography>
+                    </Box>
 
                     <Box variant="div">
                         <Button
@@ -75,7 +78,7 @@ function Item(props) {
                             target="_blank"
                             rel="noopener noreferrer"
                             href={props.item.urlPage}
-                            sx={{ mx: 2, my: 1 }}
+                            sx={{ mx: 2, my: 2 }}
                         >
                             Ver página
                         </Button>
@@ -84,7 +87,7 @@ function Item(props) {
                             target="_blank"
                             rel="noopener noreferrer"
                             href={props.item.urlRepository}
-                            sx={{ mx: 2, my: 1 }}
+                            sx={{ mx: 2, my: 2 }}
                         >
                             Ver Repositorio
                         </Button>
